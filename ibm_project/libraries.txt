@@ -1,0 +1,29 @@
+# ---- pdf processing 
+pymupdf
+
+# ---- AI orchestration 
+langchain
+langchain_core 
+langchain-communitypip
+
+# ---- vector database and embeddings 
+chromadb
+sentence-transformers
+
+# ---- LLM 
+langchain_groq
+langchain_google_genai
+
+# ---- Web ui 
+streamlit
+gradio 
+
+# ---- Data analysis 
+plotly
+pandas
+numpy 
+
+# ---- others 
+python-dotenv
+tiktoken 
+

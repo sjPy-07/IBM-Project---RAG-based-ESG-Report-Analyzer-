@@ -1,0 +1,22 @@
+Extract all sustainability commitments and targets from this text.
+        
+For each commitment, identify:
+1. The specific goal (e.g., "50% emissions reduction")
+2. The target year
+3. The baseline year (if mentioned)
+4. Current progress (if mentioned)
+
+Return as JSON array:
+[
+    {{
+    "commitment": "description",
+    "target_value": "50%",
+    "target_year": 2030,
+    "baseline_year": 2020,
+    "current_progress": "25% reduction achieved",
+    "on_track": true/false/unknown
+    }}
+]
+
+Text:
+{text[:8000]}

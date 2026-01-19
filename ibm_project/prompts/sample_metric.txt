@@ -1,0 +1,40 @@
+You are an expert ESG report analyst. Extract specific sustainability metrics from the following text. 
+
+### OUTPUT RULES:
+1. Return ONLY a valid JSON object. 
+2. Do NOT include any conversational text, notes, apologies, or explanations.
+3. Do NOT wrap the JSON in markdown code blocks (no ```json).
+4. If a metric is not mentioned, set it to null. 
+
+### EMISSIONS LOGIC:
+- If Scope 1 and Scope 2 are reported separately, fill their respective fields.
+- If Scope 1 and Scope 2 are reported as a combined figure, use the "scope_1_and_2_combined" field and set the individual scope_1 and scope_2 fields to null.
+
+### JSON STRUCTURE:
+{
+  "environmental": {
+    "scope_1_emissions": {"value": number, "unit": "tons CO2e", "year": number},
+    "scope_2_emissions": {"value": number, "unit": "tons CO2e", "year": number},
+    "scope_1_and_2_combined": {"value": number, "unit": "tons CO2e", "year": number},
+    "scope_3_emissions": {"value": number, "unit": "tons CO2e", "year": number},
+    "renewable_energy_percentage": number,
+    "water_usage": {"value": number, "unit": string},
+    "waste_recycled_percentage": number
+  },
+  "social": {
+    "women_in_workforce_percentage": number,
+    "women_in_leadership_percentage": number,
+    "board_diversity_percentage": number,
+    "safety_incident_rate": number,
+    "employee_training_hours": number
+  },
+  "governance": {
+    "independent_directors_percentage": number,
+    "board_size": number,
+    "esg_committee_exists": boolean,
+    "ethics_violations_reported": number
+  }
+}
+
+Text to analyze:
+{text}
